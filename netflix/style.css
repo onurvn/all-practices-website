@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+button {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+::placeholder {
+    color: #000;
+    font-family: 'Red Hat Display', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
+
+/* header */
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/header-image.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    padding: 20px 10%;
+    position: relative;
+}
+
+.logo {
+    cursor: pointer;
+    width: 150px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+nav button {
+    background: #db0001;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 7px 20px;
+    margin-left: 10px;
+}
+
+.langue {
+    border: 1px solid #fff;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.langue img {
+    width: 10px;
+    margin-left: 5px;
+}
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+    margin-top: -200px;
+}
+
+.header-content h1 {
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+.header-content h3 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.email-signup {
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.email-signup input {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.email-signup button {
+    background: #db0001;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    padding: 15px 30px;
+    text-transform: uppercase;
+}
+
+/* features */
+.features {
+    padding: 50px 18%;
+    font-size: 22px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 70px 0;
+    flex-wrap: wrap;
+}
+
+.text-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.text-col h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text-col p {
+    font-size: 25px;
+}
+
+.img-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col img {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+/* faq */
+.faq {
+    border-top: 6px solid #333;
+    padding: 10px 12%;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 44px;
+    margin-bottom: 10px;
+}
+
+.accordion {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.accordion li {
+    width: 100%;
+    padding: 10px;
+}
+
+.accordion li label {
+    background: #4E4E4E;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 22px;
+    position: relative;
+}
+
+label::after {
+    content: '+';
+    font-size: 50px;
+    position: absolute;
+    right: 20px;
+    transition: .3s all ease;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion .content {
+    background: #2D2D2D;
+    text-align: justify;
+    padding: 0 20px;
+    font-size: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: .3s all ease;
+}
+
+.accordion input[type="radio"]:checked+label+.content {
+    max-height: 500px;
+    padding: 30px 20px;
+}
+
+.accordion input[type="radio"]:checked+label::after {
+    transform: rotate(130deg);
+}
+
+.faq .email-signup {
+    max-width: 500px;
+    margin: 20px auto 60px;
+}
+
+.faq small {
+    font-size: 20px;
+}
+
+/* footer */
+.footer {
+    border-top: 6px solid #232323;
+    color: #B3B3B3;
+    padding: 50px 24%;
+}
+
+.footer h2 {
+    font-size: 15px;
+}
+
+.footer span {
+    text-decoration: underline;
+}
+
+.footer .col {
+    flex-grow: 1;
+    margin-left: 5px;
+    align-self: flex-start;
+    margin-top: -40px;
+}
+
+.footer .col a {
+    color: #B3B3B3;
+    display: block;
+    text-decoration: underline;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer .langue {
+    color: #fff;
+    padding: 6px 36px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    color: #B3B3B3;
+    font-size: 15px;
+}
+
+/* media */
+@media screen and (max-width: 600px) {
+    .header-content {
+        position: unset;
+        transform: none;
+        padding-top: 350px;
+    }
+
+    .header-content h1 {
+        font-size: 40px;
+    }
+
+    .text-col,
+    .img-col {
+        flex-basis: 100%;
+    }
+
+    .features h2 {
+        font-size: 30px
+    }
+
+    .features p {
+        font-size: 20px;
+    }
+
+    .row:nth-child(2),
+    .row:nth-child(4) {
+        flex-direction: column-reverse;
+    }
+
+    .features .row {
+        padding: 10px 0;
+    }
+
+    .faq h2 {
+        font-size: 26px;
+    }
+
+    .accordion li label {
+        font-size: 18px;
+    }
+
+    label::after {
+        font-size: 30px;
+    }
+}

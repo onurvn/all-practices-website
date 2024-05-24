@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: underline;
+    color: var(--renk3);
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+}
+
+:root {
+    --renk1: #FFE7D1;
+    --renk2: #FCDAB7;
+    --renk3: #362779;
+    --renk4: #EC9A53;
+    --renk5: #282728;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: 600;
+    letter-spacing: .3px;
+    color: var(--renk3);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: .4px;
+    color: var(--renk4);
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: .4px;
+}
+
+/* intro */
+.intro {
+    height: calc(100vh - 50px);
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 250px;
+    grid-template-areas:
+        'intro-left intro-sidebar'
+        'intro-footer intro-sidebar';
+    background: var(--renk1);
+}
+
+.intro .intro-left {
+    grid-area: intro-left;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.intro .intro-left h1 {
+    padding-bottom: 10px;
+}
+
+.intro .intro-sidebar {
+    grid-area: intro-sidebar;
+    background: var(--renk2);
+    padding: 35px;
+    overflow: auto;
+}
+
+.intro .intro-sidebar section h3 {
+    padding-bottom: 10px;
+}
+
+.intro .intro-sidebar section:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.intro .intro-sidebar section ul li a {
+    display: block;
+    padding: 3px 0;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 18px;
+    color: #333;
+}
+
+.intro .intro-footer {
+    grid-area: intro-footer;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: .3px;
+    padding-bottom: 50px;
+    color: #333;
+}
+
+/* main */
+main .container {
+    display: grid;
+    grid-template-columns: 1fr 1100px 2fr;
+}
+
+main header {
+    background: var(--renk3);
+}
+
+main header .container {
+    height: 50px;
+}
+
+main header .container h2 {
+    grid-column: 2 / 3;
+    align-self: center;
+}
+
+main header .container h2 a {
+    color: var(--renk4);
+    text-decoration: none;
+}
+
+main article .container .content {
+    grid-column: 2 / 3;
+    padding: 30px 30px 30px 0;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+main article .container .content pre {
+    background: var(--renk5);
+    margin-bottom: 25px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+main article .container .content code {
+    font-size: 14px;
+    background: var(--renk1);
+}
+
+main article .container .content h2 {
+    font-size: 36px;
+    color: var(--renk3);
+    letter-spacing: .4px;
+    margin-bottom: 20px;
+}
+
+main article .container .content h3 {
+    font-size: 24px;
+    color: var(--renk3);
+    letter-spacing: .4px;
+    margin-bottom: 20px;
+}
+
+main article .container .content p {
+    margin-bottom: 25px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+main article .container .content blockquote {
+    border-left: 5px solid var(--renk4);
+    padding-left: 25px;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+main article .container section:not(:last-child) {
+    border-bottom: 4px solid #eaeaea;
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+    scroll-margin: 20px;
+}
+
+main article .container .sidebar {
+    grid-column: 3/ 3;
+    background: var(--renk2);
+    padding: 35px 40px;
+}
+
+main article .container .sidebar .version {
+    font-size: 14px;
+    padding-bottom: 16px;
+}
+
+main article .container .sidebar nav {
+    position: sticky;
+    top: 35px;
+}
+
+main article .container .sidebar nav ul li a {
+    display: block;
+    padding: 3px 0;
+    font-size: 18px;
+    color: #282728;
+}
+
+footer {
+    background: var(--renk3);
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    padding: 20px 0;
+    letter-spacing: 1px;
+}
